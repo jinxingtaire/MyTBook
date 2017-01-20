@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jim.mytbook.activity.GoodsActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_goods_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFCC00" >
+
+        <RadioGroup
+            android:id="@+id/rg_goods_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="返回"
+                android:textColor="#ffffff"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_goods"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="商品"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_about_this"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="详情"
+                android:textColor="#ffffff"
+                 />
+
+            <RadioButton
+                android:id="@+id/rb_appraise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="评价"
+                android:textColor="#ffffff"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:button="@null"
+                android:gravity="center"
+                android:text="更多"
+                android:textColor="#ffffff"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_goods_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom_line"
+        android:layout_below="@+id/rl_goods_title" >
+    </android.support.v4.view.ViewPager>
+
+    <RelativeLayout 
+        android:id="@+id/rl_bottom_line"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rl_goods_bottom"
+	></RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_goods_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+         >
+
+        <Button
+            android:id="@+id/btn_put_in_cart"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@null" 
+            android:text="添加到购物车"
+            android:textColor="#aaaaaa"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

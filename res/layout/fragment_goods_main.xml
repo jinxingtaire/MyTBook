@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaaaaa"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_goods_photo_backgroud"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/iv_goods_photo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fengexian1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_goods_photo_backgroud"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="书名"
+            android:textColor="#aaaaaa"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="价格"
+            android:textColor="#CE0A0A"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_goods_inf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fengexian1"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_author_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:text="作者：" />
+
+            <TextView
+                android:id="@+id/tv_author_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_author_title" />
+            
+            
+
+            <TextView
+                android:id="@+id/tv_product_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_author_name_title"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:text="出版社：" />
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_author_name_title"
+               
+                android:layout_toRightOf="@+id/tv_product_name_title" />
+            
+            
+
+            <TextView
+                android:id="@+id/tv_product_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/tv_product_name_title"
+                android:text="出版时间：" />
+
+            <TextView
+                android:id="@+id/tv_product_time"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/tv_product_time_title"
+                android:layout_below="@+id/tv_product_name"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

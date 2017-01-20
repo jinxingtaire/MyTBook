@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFCC00" >
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="编辑推荐"
+                    android:textColor="#444444"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tvRecommandMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="更多>>"
+                    android:textColor="#444444"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_recommand"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:gravity="center_horizontal"
+                android:numColumns="4" >
+            </GridView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="编辑推荐"
+                    android:textColor="#444444"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tvHotMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="更多>>"
+                    android:textColor="#444444"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_hot"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:numColumns="4" >
+            </GridView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="编辑推荐"
+                    android:textColor="#444444"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tvNewMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="更多>>"
+                    android:textColor="#444444"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_new"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:numColumns="4" >
+            </GridView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jim.mytbook.activity.MainActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom" >
+    </android.support.v4.view.ViewPager>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFCC00" >
+
+        <RadioGroup
+            android:id="@+id/rg_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <RadioButton
+                android:id="@+id/rb_bookShop "
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_shopping"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rb_bookCar "
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_car"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rb_myTBook"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_mytbook"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+</RelativeLayout>
