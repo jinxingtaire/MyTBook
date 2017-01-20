@@ -14,16 +14,16 @@
     <RelativeLayout
         android:id="@+id/rl_bottom"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="46dp"
         android:layout_alignParentBottom="true"
-        android:background="#FFCC00" >
+        android:background="#E7A631" >
 
         <RadioGroup
             android:id="@+id/rg_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:padding="5dp" >
+            android:paddingBottom="3dp" >
 
             <RadioButton
                 android:id="@+id/rb_bookShop "
@@ -35,6 +35,7 @@
                 android:drawableTop="@drawable/selector_shopping"
                 android:gravity="center"
                 android:paddingTop="10dp"
+                
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -44,7 +45,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:checked="true"
                 android:drawableTop="@drawable/selector_car"
                 android:gravity="center"
                 android:paddingTop="10dp"
@@ -57,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:checked="true"
+                
                 android:drawableTop="@drawable/selector_mytbook"
                 android:gravity="center"
                 android:paddingTop="10dp"

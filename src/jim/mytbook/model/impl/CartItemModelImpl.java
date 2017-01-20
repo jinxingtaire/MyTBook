@@ -59,7 +59,7 @@ public class CartItemModelImpl implements ICartItemModel{
 		List<CartItem> list=cart.getList();
 		Log.i("info",list.size()+"个商品");
 		for(CartItem cartitem:list){
-			price+=(cartitem.getBook().getFixedPrice())*((float)cartitem.getCount());
+			price=(cartitem.getBook().getFixedPrice())*((float)cartitem.getCount());
 			Log.i("info",price+"元");
 		}
 		return price;

@@ -5,5 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_goods">GoodsActivity</string>
+    <string name="title_activity_my_favorite">MyFavoriteActivity</string>
+    <string name="title_activity_my_order">MyOrderActivity</string>
+    <string name="title_activity_my_total_desc">MyTotalDescActivity</string>
+    <string name="title_activity_my_setting">MySettingActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>

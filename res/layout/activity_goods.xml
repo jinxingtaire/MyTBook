@@ -104,7 +104,7 @@
             android:layout_centerInParent="true"
             android:background="@null" 
             android:text="添加到购物车"
-            android:textColor="#aaaaaa"
+            android:textColor="#CE0A0A"
             />
     </RelativeLayout>
 

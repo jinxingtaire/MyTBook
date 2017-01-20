@@ -75,7 +75,7 @@ public class CartFragment extends Fragment implements ICartItemView{
 
 	@Override
 	public void showList(List<CartItem> list) {
-		adapter=new CartAdapter(list, getActivity(),isEdit);
+		adapter=new CartAdapter(list, getActivity(),isEdit,price,this);
 		lvCart.setAdapter(adapter);
 	}
 

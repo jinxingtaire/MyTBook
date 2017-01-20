@@ -7,7 +7,10 @@ import jim.mytbook.R;
 import jim.mytbook.R.layout;
 import jim.mytbook.adapter.MyPagerAdapter;
 import jim.mytbook.fragment.CartFragment;
+import jim.mytbook.fragment.MineFragment;
 import jim.mytbook.fragment.ShoppingFragment;
+import jim.mytbook.model.AsyncCallback;
+import jim.mytbook.model.impl.UserModelImpl;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -90,14 +93,14 @@ public class MainActivity extends FragmentActivity {
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				switch (checkedId) {
-				case 0:
-					viewPager.setCurrentItem(checkedId);
+				case R.id.rb_bookShop:
+					viewPager.setCurrentItem(0);
 					break;
-				case 1:
-					viewPager.setCurrentItem(checkedId);
+				case R.id.rb_bookCar:
+					viewPager.setCurrentItem(1);
 					break;
-				case 2:
-					viewPager.setCurrentItem(checkedId);
+				case R.id.rb_myTBook:
+					viewPager.setCurrentItem(2);
 					break;
 				default:
 					break;
@@ -112,7 +115,7 @@ public class MainActivity extends FragmentActivity {
 		fragmentList=new ArrayList<Fragment>();
 		fragmentList.add(new ShoppingFragment());
 		fragmentList.add(new CartFragment());
-		fragmentList.add(new ShoppingFragment());
+		fragmentList.add(new MineFragment());
 	}
 	private void setAdapter() {
 		adapter=new MyPagerAdapter();

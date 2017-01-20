@@ -27,8 +27,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="jim.mytbook.activity.GoodsActivity"
+            android:name=".activity.GoodsActivity"
             android:label="@string/title_activity_goods" >
+        </activity>
+        <activity
+            android:name=".activity.MyFavoriteActivity"
+            android:label="@string/title_activity_my_favorite" >
+        </activity>
+        <activity
+            android:name=".activity.MyOrderActivity"
+            android:label="@string/title_activity_my_order" >
+        </activity>
+        <activity
+            android:name=".activity.MyTotalDescActivity"
+            android:label="@string/title_activity_my_total_desc" >
+        </activity>
+        <activity
+            android:name="jim.mytbook.activity.MySettingActivity"
+            android:label="@string/title_activity_my_setting" >
+        </activity>
+        <activity
+      		android:name="jim.mytbook.activity.LoginActivity"
+            android:label="@string/title_activity_login" >
         </activity>
     </application>
 

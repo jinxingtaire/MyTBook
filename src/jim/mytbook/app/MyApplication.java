@@ -6,6 +6,7 @@ import java.util.HashMap;
 import jim.mytbook.entity.Books;
 import jim.mytbook.entity.Cart;
 import jim.mytbook.entity.CartItem;
+import jim.mytbook.entity.User;
 
 import org.xutils.x;
 
@@ -20,6 +21,8 @@ public class MyApplication extends Application{
 	private static RequestQueue queue;
 	private static HashMap<String,SoftReference<Bitmap>> bitMap;
 	private static Cart cart;
+	private static User users=null;
+
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
@@ -39,6 +42,12 @@ public class MyApplication extends Application{
 	}
 	public static Cart getCart(){
 		return cart;
+	}
+	public User getUsers() {
+		return users;
+	}
+	public static void setUsers(User users) {
+		MyApplication.users = users;
 	}
 	public static void addCartItem(Books book){
 		cart.getList().add(new CartItem(book,1));
