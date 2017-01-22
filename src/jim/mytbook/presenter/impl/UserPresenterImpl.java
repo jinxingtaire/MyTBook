@@ -1,5 +1,7 @@
 package jim.mytbook.presenter.impl;
 
+
+import jim.mytbook.entity.User;
 import jim.mytbook.model.AsyncCallback;
 import jim.mytbook.model.IUserModel;
 import jim.mytbook.model.impl.UserModelImpl;
@@ -25,7 +27,41 @@ public class UserPresenterImpl implements IUserPresenter{
 			
 			@Override
 			public void onSuccess(Object success) {
-				view.showLoginResult();
+				view.showResult();
+			}
+			
+			@Override
+			public void onError(Object error) {
+				view.showResult(error);
+			}
+		});
+	}
+
+
+	@Override
+	public void loadRegiseter(User user,String code) {
+		model.register(user, code, new AsyncCallback() {
+			
+			@Override
+			public void onSuccess(Object success) {
+				view.showResult();
+			}
+			
+			@Override
+			public void onError(Object error) {
+				view.showResult(error);
+			}
+		});
+	}
+
+
+	@Override
+	public void loadCode() {
+		model.getCode(new AsyncCallback() {
+			
+			@Override
+			public void onSuccess(Object success) {
+				view.showImage(success);
 			}
 			
 			@Override

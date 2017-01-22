@@ -43,12 +43,16 @@
             android:label="@string/title_activity_my_total_desc" >
         </activity>
         <activity
-            android:name="jim.mytbook.activity.MySettingActivity"
+            android:name=".activity.MySettingActivity"
             android:label="@string/title_activity_my_setting" >
         </activity>
         <activity
-      		android:name="jim.mytbook.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="jim.mytbook.activity.RegisterActivity"
+            android:label="@string/title_activity_register" >
         </activity>
     </application>
 

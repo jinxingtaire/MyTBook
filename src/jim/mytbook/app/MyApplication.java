@@ -21,7 +21,7 @@ public class MyApplication extends Application{
 	private static RequestQueue queue;
 	private static HashMap<String,SoftReference<Bitmap>> bitMap;
 	private static Cart cart;
-	private static User users=null;
+	public static User user=null;
 
 	@Override
 	public void onCreate() {
@@ -32,6 +32,7 @@ public class MyApplication extends Application{
 		x.Ext.setDebug(true);
 		bitMap=new HashMap<String, SoftReference<Bitmap>>();
 		cart=new Cart();
+		user=new User();
 	}
 	public static RequestQueue getRequestQueue(){
 		return queue;
@@ -44,10 +45,10 @@ public class MyApplication extends Application{
 		return cart;
 	}
 	public User getUsers() {
-		return users;
+		return user;
 	}
 	public static void setUsers(User users) {
-		MyApplication.users = users;
+		MyApplication.user = users;
 	}
 	public static void addCartItem(Books book){
 		cart.getList().add(new CartItem(book,1));

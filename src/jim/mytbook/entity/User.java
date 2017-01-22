@@ -8,7 +8,7 @@ public class User {
 	private int id;
 	private String lastLoginIp;
 	private long lastLoginTime;
-	private String nickname;
+	private String realName;
 	private String password;
 	private int userIntegral;
 	public User() {
@@ -51,10 +51,10 @@ public class User {
 		this.lastLoginTime = lastLoginTime;
 	}
 	public String getNickname() {
-		return nickname;
+		return realName;
 	}
 	public void setNickname(String nickname) {
-		this.nickname = nickname;
+		this.realName = nickname;
 	}
 	public String getPassword() {
 		return password;

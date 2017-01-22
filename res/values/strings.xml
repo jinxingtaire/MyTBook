@@ -10,5 +10,6 @@
     <string name="title_activity_my_total_desc">MyTotalDescActivity</string>
     <string name="title_activity_my_setting">MySettingActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
 
 </resources>

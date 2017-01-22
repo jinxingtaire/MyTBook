@@ -6,10 +6,12 @@ import jim.mytbook.activity.MyFavoriteActivity;
 import jim.mytbook.activity.MyOrderActivity;
 import jim.mytbook.activity.MySettingActivity;
 import jim.mytbook.activity.MyTotalDescActivity;
+import jim.mytbook.app.MyApplication;
 import jim.mytbook.ui.CircleImageView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,6 +41,11 @@ public class MineFragment extends Fragment implements OnClickListener{
 		setListeners();
 		return view;
 	}
+	@Override
+	public void onResume() {
+		super.onResume();
+		setName();
+	}
 
 	private void setViews(View view) {
 		tvNickname=(TextView) view.findViewById(R.id.tvNickname);
@@ -57,7 +64,14 @@ public class MineFragment extends Fragment implements OnClickListener{
 		tvMyOrder.setOnClickListener(this);
 		tvSetting.setOnClickListener(this);
 		tvExit.setOnClickListener(this);
-		
+	}
+	private void setName(){
+		Log.i("info","用户昵称"+ MyApplication.user.getNickname());
+		if(MyApplication.user.getNickname()!=null){
+			tvNickname.setText(MyApplication.user.getNickname());
+		}else{
+			tvNickname.setText("点击头像登陆");
+		}
 	}
 
 	@Override

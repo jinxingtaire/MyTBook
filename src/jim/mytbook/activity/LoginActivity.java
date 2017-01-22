@@ -6,13 +6,17 @@ import jim.mytbook.presenter.IUserPresenter;
 import jim.mytbook.presenter.impl.UserPresenterImpl;
 import jim.mytbook.view.IUserView;
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.LinearGradient;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity implements IUserView {
@@ -20,6 +24,7 @@ public class LoginActivity extends Activity implements IUserView {
 	private EditText etEmail;
 	private EditText etPassword;
 	private Button btnLogin;
+	private TextView tvRegister;
 	private IUserPresenter presenter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +38,9 @@ public class LoginActivity extends Activity implements IUserView {
 		etEmail=(EditText) findViewById(R.id.etLoginEmail);
 		etPassword=(EditText) findViewById(R.id.etLoginPassword);
 		btnLogin=(Button) findViewById(R.id.btnLogin);
+		tvRegister=(TextView) findViewById(R.id.tvRegister);
 	}
 
-	@Override
-	public void showLoginResult() {
-		Toast.makeText(this,"µÇÂ½³É¹¦", 0).show();
-		this.finish();
-	}
 
 	private void setListeners() {
 		btnLogin.setOnClickListener(new OnClickListener() {
@@ -52,6 +53,29 @@ public class LoginActivity extends Activity implements IUserView {
 				presenter.loadLogin(email, password);
 			}
 		});
+		tvRegister.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+			}
+		});
+	}
+
+	@Override
+	public void showResult() {
+		Toast.makeText(this,"µÇÂ½³É¹¦", 0).show();
+		this.finish();
+	}
+	@Override
+	public void showResult(Object error) {
+		Log.i("info", "µÇÂ½Ê§°Ü"+error);
+	}
+
+	@Override
+	public void showImage(Object success) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

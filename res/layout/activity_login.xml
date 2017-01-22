@@ -76,6 +76,7 @@
             android:textColor="#18B4EF" />
 
         <TextView
+            android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
